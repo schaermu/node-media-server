@@ -25,7 +25,6 @@ app.get('/convert/*', function(req, res) {
         source = source.replace(/ /, '\\ ');
         fpath = fpath.replace(/ /, '\\ ');
         // found source file, start conversion
-        /*
         conv.convert(fpath, source, function(job, err) {
           if (res.state != 'NOK') {
             // job started, write status
@@ -34,8 +33,7 @@ app.get('/convert/*', function(req, res) {
             // job failed, write error
             res.send(err);
           }
-        });
-        */        
+        });  
       } else {
         res.send({ state: 'NOK', msg: 'Could not find original media file to convert from' });
       }
